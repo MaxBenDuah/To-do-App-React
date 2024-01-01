@@ -19,7 +19,6 @@ const TodoList = function ({todo, onDeleteTodo, onCrossOut}) {
             <Checkbox {...label} value={todo.packed} onChange={() => onCrossOut(todo.id)} sx={{paddingTop: 0, color: "#1d4ed8", '&.Mui-checked': {color: "#1d4ed8"}}} />
               
             <div className="todo--details">
-              
               <h4 style={{textDecoration: todo.packed ? "line-through" : ""}}>{todo.title}</h4>
               <p>{todo.description}</p>
             </div>

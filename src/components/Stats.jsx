@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const Stats = function ({todoList}) {
   const [isCompleted, setIsCompleted] = useState(false);
@@ -6,8 +6,6 @@ const Stats = function ({todoList}) {
   const handleClick = () => {
     setIsCompleted(curr => !curr);
   }
-
-  // isCompleted && todoList.slice().sort((a, b) => Number(a.packed) - Number(b.packed));
 
   const totalNumberOfTodos = todoList.length;
   const completed = todoList.filter(todo => todo.packed).length;

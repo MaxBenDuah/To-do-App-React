@@ -9,7 +9,6 @@ import Stats from "./Stats";
 const App = function () {
   const [todoList, setTodoList] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
-
   
 
   const handleToDo = (toDo) => {
@@ -41,7 +40,7 @@ const App = function () {
         {isOpen && <Input onAddToDo={handleToDo} onOpenForm={handleOpenForm} />}
         {todoList.length > 0 && <Stats todoList={todoList} />}
         <Todo todoList={todoList} onDeleteTodo={handleDelete} onCrossOut={handleCrossOut} />
-        {todoList.length > 0 && <ClearList onClearTodoList={clearTodoList} />}
+        {todoList.length > 0 && <ClearList onClearTodoList={clearTodoList}>Clear List</ClearList>}
       </div>
     </div>
   );

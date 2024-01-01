@@ -1,9 +1,9 @@
 import React from "react";
 
-const ClearList = function ({onClearTodoList}) {
+const ClearList = function ({onClearTodoList, children}) {
   return (
     <div>
-      <button className="clearlist--btn" onClick={onClearTodoList}>Clear List</button>
+      <button className="clearlist--btn" onClick={onClearTodoList}>{children}</button>
     </div>
   );
 }
