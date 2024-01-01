@@ -1,5 +1,4 @@
 import React from "react";
-// import * as React from 'react';
 import Checkbox from '@mui/material/Checkbox';
 
 const TodoList = function ({todo, onDeleteTodo, onCrossOut}) {
