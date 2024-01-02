@@ -2,12 +2,6 @@ import React from "react";
 import Checkbox from '@mui/material/Checkbox';
 
 const TodoList = function ({todo, onDeleteTodo, onCrossOut}) {
-  const date = new Date();
-  const options = {
-    hour: "numeric",
-    minute: "numeric"
-  };
-  const formatTime = new Intl.DateTimeFormat(navigator.language, options).format(date);
 
   const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
   
@@ -27,7 +21,7 @@ const TodoList = function ({todo, onDeleteTodo, onCrossOut}) {
           </div>
         </div>
         <hr />
-        <p>Today <span className="display--time">{formatTime}</span></p>
+        <p>Today <span className="display--time">{todo.date}</span></p>
       </li>
   );
 }

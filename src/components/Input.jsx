@@ -3,6 +3,14 @@ import React, { useState } from "react";
 const Input = function ({onAddToDo, onOpenForm}) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+
+  const options = {
+    hour: "numeric",
+    minute: "numeric"
+  };
+
+  const now = new Date();
+  const date = new Intl.DateTimeFormat(navigator.language, options).format(now);
   
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,7 +21,8 @@ const Input = function ({onAddToDo, onOpenForm}) {
       title,
       description,
       id: Date.now(),
-      packed: false
+      packed: false,
+      date
     };
 
     onAddToDo(toDo);
